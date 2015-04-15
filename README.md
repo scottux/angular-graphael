@@ -63,3 +63,42 @@ In the view, you just pass the appropriate attributes.
 ```
 
 That's it, you have a dot chart!
+
+### Bar Chart
+
+You set up your options and data in the controller. [Bar Chart Reference](http://g.raphaeljs.com/reference.html#Paper.barchart)
+
+```
+$scope.barchart = {
+    options: {},
+    data: {}
+};
+```
+
+In the view, you just pass the appropriate attributes.
+
+```
+<barchart values="barchart.data" options="barchart.options"></barchart>
+```
+
+That's it, you have a bar chart!
+
+### Line Chart
+
+You set up your options and data in the controller. [Line Chart Reference](http://g.raphaeljs.com/reference.html#Paper.linechart)
+
+```
+$scope.linechart = {
+	options: {}
+	dataX: [],
+	dataY: []
+};
+```
+
+In the view, you just pass the appropriate attributes.
+
+```
+<linechart values-x="linechart.dataX" values-y="linechart.dataY" options="linechart.options"></linechart>
+```
+
+That's it, you have a line chart!
