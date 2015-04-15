@@ -12,8 +12,8 @@ angular.module('angular-graphael').directive('dotchart', function ($window, mapD
     return {
         restrict: 'E',
         scope: {
-            valuesx: '=',
-            valuesy: '=',
+            valuesX: '=',
+            valuesY: '=',
             size: '=',
             options: '=',
             x: '=',
@@ -34,7 +34,7 @@ angular.module('angular-graphael').directive('dotchart', function ($window, mapD
                 // Set up the canvas
                 r = $window.Raphael(element[0]);
                 // Add the chart to the canvas with all of our options and data.
-                r.dotchart(x, y, width, height, scope.valuesx, scope.valuesy, mapData(scope.size), scope.options);
+                r.dotchart(x, y, width, height, scope.valuesX, scope.valuesY, mapData(scope.size), scope.options);
             });
         }
     };

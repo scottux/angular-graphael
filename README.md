@@ -59,7 +59,7 @@ $scope.dotchart = {
 In the view, you just pass the appropriate attributes.
 
 ```
-<dotchart size="dotchart.data" valuesx="dotchart.valX" valuesy="dotchart.valY" options="dotchart.options"></dotchart>
+<dotchart size="dotchart.data" values-x="dotchart.valX" values-y="dotchart.valY" options="dotchart.options"></dotchart>
 ```
 
 That's it, you have a dot chart!

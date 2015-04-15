@@ -17,8 +17,8 @@ angular.module('angular-graphael').directive('linechart', function ($window, map
             x: '=',
             y: '=',
             options: '=',
-            valuesx: '=',
-            valuesy: '='
+            valuesX: '=',
+            valuesY: '='
         },
         template: '<div></div>',
         link: function (scope, element) {
@@ -39,7 +39,7 @@ angular.module('angular-graphael').directive('linechart', function ($window, map
                 // Set up the canvas
                 r = $window.Raphael(element[0]);
                 // Add the chart to the canvas with all of our options and data.
-                r.barchart(x, y, width, height, mapData(scope.valuesx), mapData(scope.valuesy), scope.options);
+                r.barchart(x, y, width, height, mapData(scope.valuesX), mapData(scope.valuesY), scope.options);
             });
         }
     };
