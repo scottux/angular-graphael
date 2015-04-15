@@ -2,6 +2,8 @@
 
 A set of AngularJS directives to make charts using [gRaphaël](http://g.raphaeljs.com/).
 
+Now available on bower: `bower install angular-graphael --save`
+
 ## Examples
 
 ### Pie Chart
