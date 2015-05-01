@@ -98,7 +98,7 @@ $scope.linechart = {
 In the view, you just pass the appropriate attributes.
 
 ```
-<linechart values-x="linechart.dataX" values-y="linechart.dataY" options="linechart.options"></linechart>
+<linechart valuesx="linechart.dataX" valuesy="linechart.dataY" options="linechart.options"></linechart>
 ```
 
 That's it, you have a line chart!
