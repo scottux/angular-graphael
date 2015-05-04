@@ -30,7 +30,7 @@ angular.module('angular-graphael').directive('barchart', function ($window, mapD
                     y = scope.y || 100,
                     // Width
                     width = scope.width || 100,
-                    // height
+                    // Height
                     height = scope.height || 100;
 
                 // If you don't remove the old chart, you're gonna have a bad time.

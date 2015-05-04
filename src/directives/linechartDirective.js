@@ -31,7 +31,7 @@ angular.module('angular-graphael').directive('linechart', function ($window, map
                     y = scope.y || 100,
                 // Width
                     width = scope.width || 100,
-                // height
+                // Height
                     height = scope.height || 100;
 
                 // If you don't remove the old chart, you're gonna have a bad time.
@@ -39,7 +39,7 @@ angular.module('angular-graphael').directive('linechart', function ($window, map
                 // Set up the canvas
                 r = $window.Raphael(element[0]);
                 // Add the chart to the canvas with all of our options and data.
-                r.barchart(x, y, width, height, mapData(scope.valuesX), mapData(scope.valuesY), scope.options);
+                r.linechart(x, y, width, height, mapData(scope.valuesX), mapData(scope.valuesY), scope.options);
             });
         }
     };

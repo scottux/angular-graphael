@@ -24,9 +24,13 @@ angular.module('angular-graphael').directive('dotchart', function ($window, mapD
             // Right now we only care about watching if the data changes.
             scope.$watch('size', function () {
                 var r,
+                // X coordinate
                     x = scope.x || 0,
+                // Y coordinate
                     y = scope.y || 0,
+                // Width
                     width = scope.width || 500,
+                // Height
                     height = scope.height || 80;
 
                 // If you don't remove the old chart, you're gonna have a bad time.

@@ -1,6 +1,6 @@
 {
   "name": "angular-graphael",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A set of AngularJS directives to make charts using gRaphaël.",
   "homepage": "https://github.com/scottux/angular-graphael",
   "authors": [

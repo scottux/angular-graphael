@@ -46,7 +46,7 @@ angular.module('angular-graphael').directive('barchart', ["$window", "mapData", 
                     y = scope.y || 100,
                     // Width
                     width = scope.width || 100,
-                    // height
+                    // Height
                     height = scope.height || 100;
 
                 // If you don't remove the old chart, you're gonna have a bad time.
@@ -74,8 +74,8 @@ angular.module('angular-graphael').directive('dotchart', ["$window", "mapData", 
     return {
         restrict: 'E',
         scope: {
-            valuesx: '=',
-            valuesy: '=',
+            valuesX: '=',
+            valuesY: '=',
             size: '=',
             options: '=',
             x: '=',
@@ -86,9 +86,13 @@ angular.module('angular-graphael').directive('dotchart', ["$window", "mapData", 
             // Right now we only care about watching if the data changes.
             scope.$watch('size', function () {
                 var r,
+                // X coordinate
                     x = scope.x || 0,
+                // Y coordinate
                     y = scope.y || 0,
+                // Width
                     width = scope.width || 500,
+                // Height
                     height = scope.height || 80;
 
                 // If you don't remove the old chart, you're gonna have a bad time.
@@ -96,7 +100,7 @@ angular.module('angular-graphael').directive('dotchart', ["$window", "mapData", 
                 // Set up the canvas
                 r = $window.Raphael(element[0]);
                 // Add the chart to the canvas with all of our options and data.
-                r.dotchart(x, y, width, height, scope.valuesx, scope.valuesy, mapData(scope.size), scope.options);
+                r.dotchart(x, y, width, height, scope.valuesX, scope.valuesY, mapData(scope.size), scope.options);
             });
         }
     };
@@ -121,8 +125,8 @@ angular.module('angular-graphael').directive('linechart', ["$window", "mapData",
             x: '=',
             y: '=',
             options: '=',
-            valuesx: '=',
-            valuesy: '='
+            valuesX: '=',
+            valuesY: '='
         },
         template: '<div></div>',
         link: function (scope, element) {
@@ -135,7 +139,7 @@ angular.module('angular-graphael').directive('linechart', ["$window", "mapData",
                     y = scope.y || 100,
                 // Width
                     width = scope.width || 100,
-                // height
+                // Height
                     height = scope.height || 100;
 
                 // If you don't remove the old chart, you're gonna have a bad time.
@@ -143,7 +147,7 @@ angular.module('angular-graphael').directive('linechart', ["$window", "mapData",
                 // Set up the canvas
                 r = $window.Raphael(element[0]);
                 // Add the chart to the canvas with all of our options and data.
-                r.barchart(x, y, width, height, mapData(scope.valuesx), mapData(scope.valuesy), scope.options);
+                r.linechart(x, y, width, height, mapData(scope.valuesX), mapData(scope.valuesY), scope.options);
             });
         }
     };
